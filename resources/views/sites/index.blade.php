@@ -66,7 +66,7 @@
                         <tr>
                             <td><a href="http{{ $site->ssl_status ? 's' : '' }}://{{ $site->domain }} "
                                    target="_blank">{{ $site->domain }} ↗️</a></td>
-                            <td><a href="{{ $site->working_directory }}" class="btn btn-info btn-small" target="_blank"><i
+                            <td><a href="{{ route('file_manager.index',['leftPath'=>urldecode($site->working_directory)]) }}" class="btn btn-info btn-small" target="_blank"><i
                                         class="fa fa-folder-open"></i></a></td>
                             <td><span class="btn btn-{{ $site->enabled ? 'success' : 'warning' }} text-white btn-small"><i
                                         class="fa fa-{{ $site->enabled ? 'play' : 'pause' }}"></i></span></td>
