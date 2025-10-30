@@ -27,6 +27,9 @@ Route::middleware(['web'])->group(function () {
         return view('dashboard.logs');
     })->name('logs.index');
 
+    Route::get('/file-manager', function () {
+        return view('filemanager.index');
+    })->name('file_manager.index');
 });
 
 Route::get('/containers/logs/{containerId}', [DockerController::class, 'logs'])->name('containers.logs');
