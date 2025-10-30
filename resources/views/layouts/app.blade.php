@@ -39,6 +39,10 @@
                 <i class="fas fa-globe"></i>
                 Site Yönetimi
             </a>
+            <a href="{{ route('file_manager.index') }}" class="menu-item {{ request()->routeIs('file_manager.*') ? 'active' : '' }}">
+                <i class="fas fa-folder"></i>
+                Dosya Yöneticisi
+            </a>
             <a href="#" class="menu-item">
                 <i class="fas fa-cogs"></i>
                 Sunucu Ayarları
